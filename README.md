@@ -11,3 +11,4 @@
   
 详情请查看 
 [NXcloud-SDK说明文档](https://github.com/nxtele/nxcloud-java-sdk/blob/main/src/test/java/com/nxcloud/sdk/NxVoiceClientTest.java)
+。
