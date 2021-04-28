@@ -11,5 +11,5 @@
 * [语音模块实例](https://github.com/nxtele/nxcloud-java-sdk/blob/main/src/test/java/com/nxcloud/sdk/NxVoiceClientTest.java)
   
 详情请查看 
-[NXcloud-SDK说明文档](https://github.com/nxtele/nxcloud-java-sdk/blob/main/src/test/java/com/nxcloud/sdk/NxVoiceClientTest.java)
+[NXcloud-SDK说明文档](https://github.com/nxtele/nxcloud-java-sdk/wiki)
 。
