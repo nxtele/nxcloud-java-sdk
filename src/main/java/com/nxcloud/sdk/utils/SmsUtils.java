@@ -13,28 +13,15 @@ public class SmsUtils {
         put("60", 7); // 马拉西亚，运营商 7 个隐形字符
     }};
 
-    static boolean isNotGSM(String str) {
-        boolean flag = false;
-        if (str == null || "".equals(str.trim())) {
-            return flag;
-        }
-        for (int i = 0; i < str.length(); i++) {
-            if ((str.charAt(i) + "").getBytes().length > 1) {
-                return true;
-            }
-        }
-        return flag;
-    }
-
     public static int length(String content) throws Exception {
-        String encode = isNotGSM(content) ? "UCS2" : "GSM";
+        String encode = GSMEncoder.canRepresent(content) ? "GSM":"UCS2";
 
         return encode.equals("UCS2") ? content.getBytes("UTF-16LE").length :
                 new GSMEncoder().encode(content).length;
     }
 
     public static int size(String content, String countryCode) throws Exception {
-        String encode = isNotGSM(content) ? "UCS2" : "GSM";
+        String encode = GSMEncoder.canRepresent(content) ? "GSM":"UCS2";
 
         int size = 0;
         int len = encode.equals("UCS2") ? content.getBytes("UTF-16LE").length :
